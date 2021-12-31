@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students_attendances",
+  "info": {
+    "name": "Attendance Students",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "studentName": {
+      "type": "string"
+    },
+    "rollNo": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "image": {
+      "type": "text"
+    },
+    "attendance": {
+      "via": "attendancestudents",
+      "model": "attendance"
+    }
+  }
+}

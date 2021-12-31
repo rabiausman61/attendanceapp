@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classes",
+  "info": {
+    "name": "classes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "teacherName": {
+      "type": "string"
+    },
+    "subjectName": {
+      "type": "string"
+    },
+    "classname": {
+      "type": "string"
+    },
+    "section": {
+      "type": "string"
+    },
+    "batch": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "classes"
+    },
+    "attendances": {
+      "via": "class",
+      "collection": "attendance"
+    },
+    "students": {
+      "via": "class",
+      "collection": "students"
+    }
+  }
+}

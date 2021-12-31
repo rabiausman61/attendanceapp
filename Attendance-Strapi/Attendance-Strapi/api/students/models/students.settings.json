@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "name": "students"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "studentname": {
+      "type": "string"
+    },
+    "rollno": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "default": "Present"
+    },
+    "image": {
+      "type": "text"
+    },
+    "class": {
+      "model": "classes",
+      "via": "students"
+    }
+  }
+}
